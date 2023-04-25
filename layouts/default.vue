@@ -1,0 +1,6 @@
+<template>
+  <div>
+    hello
+    <slot></slot>
+  </div>
+</template>
