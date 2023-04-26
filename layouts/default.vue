@@ -151,7 +151,6 @@ html {
 main {
   height: 100vmin;
   width: 100vmin;
-  background-color: red;
   position: absolute;
   top: 0;
   bottom: 0;
