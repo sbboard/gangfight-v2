@@ -2,8 +2,7 @@
 const vertBarHeight = ref(0);
 const horzBarWidth = ref(0);
 const resize = () => {
-  const isTaller = window.innerHeight > window.innerWidth;
-  if (isTaller) {
+  if (window.innerHeight > window.innerWidth) {
     horzBarWidth.value = 0;
     vertBarHeight.value = (window.innerHeight - window.innerWidth) / 2;
   } else {
