@@ -10,6 +10,18 @@ const resize = () => {
     horzBarWidth.value = (window.innerWidth - window.innerHeight) / 2;
   }
 };
+
+const randomNumber = computed(() => {
+  let num1 = Math.floor(Math.random() * 10) + 1;
+  let num2 = Math.floor(Math.random() * 10) + 1;
+
+  while (num1 === num2) {
+    num2 = Math.floor(Math.random() * 10) + 1;
+  }
+
+  return [num1, num2];
+});
+
 onMounted(() => {
   resize();
   window.addEventListener("resize", resize);
@@ -36,7 +48,10 @@ onUnmounted(() => {
     <main>
       <slot></slot>
     </main>
-    <div class="rightBar" :style="`width:${horzBarWidth}px`"></div>
+    <div class="rightBar" :style="`width:${horzBarWidth}px`">
+      <crtImage class="crt" :num="randomNumber[0]" />
+      <crtImage class="crt" :num="randomNumber[1]" />
+    </div>
     <div class="bottomBar" :style="`height:${vertBarHeight}px`"></div>
   </div>
 </template>
@@ -77,9 +92,15 @@ html {
     top: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/assets/sidebar.jpg");
+    background-image: url("/img/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 0;
+    .crt {
+      width: 15.5vmin;
+      height: 15.5vmin;
+      position: relative;
+      display: inline-block;
+    }
   }
 
   .bottomBar {
@@ -92,7 +113,7 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    background-image: url("/assets/sidebar.jpg");
+    background-image: url("/img/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 100%;
     .leftWrap {
