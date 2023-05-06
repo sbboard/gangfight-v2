@@ -1,6 +1,9 @@
+<script lang="ts" setup>
+const config = useRuntimeConfig();
+</script>
+
 <template>
-  <div>home</div>
+  <div>{{ config.public.apiBase }}</div>
 </template>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

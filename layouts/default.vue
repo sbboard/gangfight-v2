@@ -92,7 +92,7 @@ html {
     top: 0;
     right: 0;
     bottom: 0;
-    background-image: url("assets/images/sidebar/sidebar.jpg");
+    background-image: url("~/assets/images/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 0;
     white-space: nowrap;
@@ -114,7 +114,7 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    background-image: url("assets/images/sidebar/sidebar.jpg");
+    background-image: url("~/assets/images/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 100%;
     .leftWrap {

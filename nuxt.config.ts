@@ -8,4 +8,10 @@ export default defineNuxtConfig({
   image: {
     dir: "assets/images",
   },
+  runtimeConfig: {
+    apiSecret: process.env.API_SECRET,
+    public: {
+      apiBase: process.env.API_BASE || "peen",
+    },
+  },
 });
