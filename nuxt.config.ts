@@ -4,4 +4,8 @@ export default defineNuxtConfig({
     "@/assets/css/gangColors.sass",
     "@/assets/css/gangFonts.sass",
   ],
+  modules: ["@nuxt/image-edge"],
+  image: {
+    dir: "assets/images",
+  },
 });

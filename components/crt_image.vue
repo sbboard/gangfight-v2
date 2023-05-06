@@ -2,10 +2,6 @@
 const props = defineProps<{
   num: number;
 }>();
-const imageUrl = new URL(
-  `/assets/img/sidebar/0default/${props.num}.jpg`,
-  import.meta.url
-).href;
 
 const colors = ["red", "green", "blue"];
 </script>
@@ -13,11 +9,11 @@ const colors = ["red", "green", "blue"];
 <template>
   <div class="wrap">
     <div class="scan">
-      <img src="/assets/img/sidebar/scanlines.png" />
+      <nuxt-img src="/sidebar/scanlines.png" />
     </div>
     <template v-for="color in colors">
       <div :class="color">
-        <img :src="imageUrl" />
+        <nuxt-img :src="`/sidebar/0default/${props.num}.jpg`" />
       </div>
     </template>
   </div>

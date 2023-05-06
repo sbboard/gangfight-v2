@@ -92,9 +92,10 @@ html {
     top: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/assets/img/sidebar/sidebar.jpg");
+    background-image: url("assets/images/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 0;
+    white-space: nowrap;
     .crt {
       width: 15.5vmin;
       height: 15.5vmin;
@@ -113,7 +114,7 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    background-image: url("assets/img/sidebar/sidebar.jpg");
+    background-image: url("assets/images/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 100%;
     .leftWrap {
@@ -136,6 +137,7 @@ html {
         align-items: center;
         vertical-align: top;
         font-size: 8vh;
+        width: 10.5vh;
         width: 9.5vh;
         padding-top: 0.15em;
         height: 85vh;
