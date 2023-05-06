@@ -92,7 +92,7 @@ html {
     top: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/img/sidebar/sidebar.jpg");
+    background-image: url("/assets/img/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 0;
     .crt {
@@ -113,7 +113,7 @@ html {
     top: 0;
     bottom: 0;
     left: 0;
-    background-image: url("/img/sidebar/sidebar.jpg");
+    background-image: url("assets/img/sidebar/sidebar.jpg");
     background-size: auto 100%;
     background-position: 100%;
     .leftWrap {

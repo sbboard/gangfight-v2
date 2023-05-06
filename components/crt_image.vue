@@ -2,6 +2,10 @@
 const props = defineProps<{
   num: number;
 }>();
+const imageUrl = new URL(
+  `/assets/img/sidebar/0default/${props.num}.jpg`,
+  import.meta.url
+).href;
 
 const colors = ["red", "green", "blue"];
 </script>
@@ -9,11 +13,11 @@ const colors = ["red", "green", "blue"];
 <template>
   <div class="wrap">
     <div class="scan">
-      <img src="/img/sidebar/scanlines.png" />
+      <img src="/assets/img/sidebar/scanlines.png" />
     </div>
     <template v-for="color in colors">
       <div :class="color">
-        <img :src="`/img/sidebar/0default/${$props.num}.jpg`" />
+        <img :src="imageUrl" />
       </div>
     </template>
   </div>
